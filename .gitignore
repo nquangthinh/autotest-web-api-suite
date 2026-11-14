@@ -1,0 +1,50 @@
+# Python bytecode & cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual Environments
+.venv/
+venv/
+ENV/
+env/
+
+# Pytest & Testing Cache / Temp
+.pytest_cache/
+.pytest_temp/
+reports/.qa.lock
+reports/.qa-*/
+reports_codex_bak/
+.coverage
+htmlcov/
+
+# Editor & IDE settings
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# SQLite Database run-time data (keep directory structure if needed)
+data/*.sqlite3
+data/*.sqlite3-journal
+data/*.sqlite3-wal
+data/*.sqlite3-shm
+
+# Explicitly KEEP essential project folders & assets
+!assets/
+!assets/*
+!reports/
+!reports/test_results.json
+!reports/autotest_report.html
+!samples/
+!samples/*
+!tests/
+!tests/*
+!templates/
+!templates/*

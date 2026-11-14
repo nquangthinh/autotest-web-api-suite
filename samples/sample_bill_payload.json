@@ -1,0 +1,19 @@
+{
+  "merchant_name": "Lẩu Nấm Gia Khánh - Hoàng Cầu",
+  "members": ["An", "Bình", "Chi", "Dũng"],
+  "items": [
+    { "name": "Set Lẩu Nấm Bò Wagyu", "price": 850000, "quantity": 1 },
+    { "name": "Nấm Tùng Nhung Thượng Hạng", "price": 280000, "quantity": 1 },
+    { "name": "Bò Cuộn Nấm Kim Châm", "price": 160000, "quantity": 2 },
+    { "name": "Trà Sâm Hạt Sen", "price": 35000, "quantity": 4 }
+  ],
+  "assignments": {
+    "0": { "An": 1, "Bình": 1, "Chi": 1, "Dũng": 1 },
+    "1": { "An": 2, "Bình": 1, "Chi": 0, "Dũng": 1 },
+    "2": { "An": 1, "Bình": 1, "Chi": 1, "Dũng": 1 },
+    "3": { "An": 1, "Bình": 1, "Chi": 1, "Dũng": 1 }
+  },
+  "discount_amount": 100000,
+  "tax_amount": 80000,
+  "fee_amount": 50000
+}

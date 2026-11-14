@@ -1,0 +1,1176 @@
+{
+  "schema_version": "1.0",
+  "run_id": "c98a51c6-6034-43ef-91b3-67523f9af314",
+  "started_at": "2026-11-14T03:36:49.957877+00:00",
+  "finished_at": "2026-11-14T03:36:52.086913+00:00",
+  "status": "PASSED",
+  "exit_code": 0,
+  "total_tests": 26,
+  "passed": 26,
+  "failed": 0,
+  "skipped": 0,
+  "not_run": 0,
+  "pass_rate_percent": 100.0,
+  "total_duration_ms": 2129.047,
+  "test_duration_ms": 1188.933,
+  "layers": {
+    "Unit": {
+      "total": 10,
+      "passed": 10,
+      "tests": [
+        {
+          "id": "tests/test_1_unit_math.py::test_equal_one_x",
+          "name": "test_equal_one_x",
+          "layer": "Unit",
+          "status": "PASSED",
+          "duration_ms": 0.594,
+          "description": "Ba suất 1x chia đều; đồng dư được phân bổ ổn định, không mất tiền.",
+          "errors": []
+        },
+        {
+          "id": "tests/test_1_unit_math.py::test_one_x_two_x",
+          "name": "test_one_x_two_x",
+          "layer": "Unit",
+          "status": "PASSED",
+          "duration_ms": 0.452,
+          "description": "Suất 2x trả gấp đôi suất 1x với hóa đơn chia hết.",
+          "errors": []
+        },
+        {
+          "id": "tests/test_1_unit_math.py::test_one_x_two_x_three_x",
+          "name": "test_one_x_two_x_three_x",
+          "layer": "Unit",
+          "status": "PASSED",
+          "duration_ms": 0.446,
+          "description": "Ba hệ số 1x/2x/3x bảo toàn đúng tỷ lệ 1:2:3.",
+          "errors": []
+        },
+        {
+          "id": "tests/test_1_unit_math.py::test_multiple_items_quantity_and_nonparticipant",
+          "name": "test_multiple_items_quantity_and_nonparticipant",
+          "layer": "Unit",
+          "status": "PASSED",
+          "duration_ms": 0.47,
+          "description": "Cộng nhiều món và số lượng đúng; người không chọn món có phần tiền bằng 0.",
+          "errors": []
+        },
+        {
+          "id": "tests/test_1_unit_math.py::test_weighted_tax_voucher_exact_vnd",
+          "name": "test_weighted_tax_voucher_exact_vnd",
+          "layer": "Unit",
+          "status": "PASSED",
+          "duration_ms": 158.827,
+          "description": "VAT/voucher/phụ phí phân bổ trọng số; 300 mẫu seed cố định có sai số tổng 0đ.",
+          "errors": []
+        },
+        {
+          "id": "tests/test_1_unit_math.py::test_zero_bill",
+          "name": "test_zero_bill",
+          "layer": "Unit",
+          "status": "PASSED",
+          "duration_ms": 0.494,
+          "description": "Hóa đơn 0đ, danh sách rỗng và món 0đ không chia cho 0.",
+          "errors": []
+        },
+        {
+          "id": "tests/test_1_unit_math.py::test_hundred_percent_discount",
+          "name": "test_hundred_percent_discount",
+          "layer": "Unit",
+          "status": "PASSED",
+          "duration_ms": 0.582,
+          "description": "Voucher 100% đưa tổng và từng phần về 0đ; VAT vẫn cộng đúng nếu có.",
+          "errors": []
+        },
+        {
+          "id": "tests/test_1_unit_math.py::test_no_selection_uses_explicit_fallback",
+          "name": "test_no_selection_uses_explicit_fallback",
+          "layer": "Unit",
+          "status": "PASSED",
+          "duration_ms": 0.576,
+          "description": "Món chưa ai chọn hoặc mọi hệ số bằng 0 được chia đều, không ZeroDivisionError.",
+          "errors": []
+        },
+        {
+          "id": "tests/test_1_unit_math.py::test_invalid_money_members_and_weights",
+          "name": "test_invalid_money_members_and_weights",
+          "layer": "Unit",
+          "status": "PASSED",
+          "duration_ms": 0.552,
+          "description": "Từ chối tiền âm/lẻ, voucher vượt hóa đơn, tên trùng và hệ số không hợp lệ.",
+          "errors": []
+        },
+        {
+          "id": "tests/test_1_unit_math.py::test_trip_graph_at_most_n_minus_one",
+          "name": "test_trip_graph_at_most_n_minus_one",
+          "layer": "Unit",
+          "status": "PASSED",
+          "duration_ms": 6.004,
+          "description": "Cấn trừ đồ thị bảo toàn số dư và tối đa N-1 giao dịch trên 200 mạng nợ.",
+          "errors": []
+        }
+      ]
+    },
+    "API": {
+      "total": 10,
+      "passed": 10,
+      "tests": [
+        {
+          "id": "tests/test_2_api_endpoints.py::test_health",
+          "name": "test_health",
+          "layer": "API",
+          "status": "PASSED",
+          "duration_ms": 50.33,
+          "description": "Health trả HTTP 200, JSON trạng thái và đơn vị VND.",
+          "errors": []
+        },
+        {
+          "id": "tests/test_2_api_endpoints.py::test_split_contract_and_validation",
+          "name": "test_split_contract_and_validation",
+          "layer": "API",
+          "status": "PASSED",
+          "duration_ms": 72.618,
+          "description": "API chia tiền đúng trọng số và trả 422 cho payload sai hoặc không bảo toàn tiền.",
+          "errors": []
+        },
+        {
+          "id": "tests/test_2_api_endpoints.py::test_vietqr_normalizes_and_encodes",
+          "name": "test_vietqr_normalizes_and_encodes",
+          "layer": "API",
+          "status": "PASSED",
+          "duration_ms": 31.616,
+          "description": "VietQR xóa whitespace STK, bỏ dấu tên Việt và encode memo có ký tự đặc biệt.",
+          "errors": []
+        },
+        {
+          "id": "tests/test_2_api_endpoints.py::test_csv_has_utf8_bom_and_unicode",
+          "name": "test_csv_has_utf8_bom_and_unicode",
+          "layer": "API",
+          "status": "PASSED",
+          "duration_ms": 23.436,
+          "description": "CSV có chính xác BOM EF BB BF ở ba byte đầu, giữ tiếng Việt và giá trị tiền.",
+          "errors": []
+        },
+        {
+          "id": "tests/test_2_api_endpoints.py::test_sqlite_save_read_and_reopen",
+          "name": "test_sqlite_save_read_and_reopen",
+          "layer": "API",
+          "status": "PASSED",
+          "duration_ms": 46.867,
+          "description": "SQLite lưu thật, dùng câu lệnh tham số và đọc lại sau khi tạo ứng dụng mới.",
+          "errors": []
+        },
+        {
+          "id": "tests/test_2_api_endpoints.py::test_analytics_and_missing_bill",
+          "name": "test_analytics_and_missing_bill",
+          "layer": "API",
+          "status": "PASSED",
+          "duration_ms": 87.3,
+          "description": "Thống kê SQLite cộng đúng số hóa đơn và tổng; ID thiếu trả 404.",
+          "errors": []
+        },
+        {
+          "id": "tests/test_2_api_endpoints.py::test_trip_debt_endpoint",
+          "name": "test_trip_debt_endpoint",
+          "layer": "API",
+          "status": "PASSED",
+          "duration_ms": 24.609,
+          "description": "Endpoint cấn trừ trả giao dịch cụ thể và từ chối số dư không cân bằng.",
+          "errors": []
+        },
+        {
+          "id": "tests/test_2_api_endpoints.py::test_qa_summary_snapshot_and_unavailable",
+          "name": "test_qa_summary_snapshot_and_unavailable",
+          "layer": "API",
+          "status": "PASSED",
+          "duration_ms": 37.551,
+          "description": "QA summary trả nguyên snapshot; báo 503 khi report thiếu, hỏng hoặc sai schema.",
+          "errors": []
+        },
+        {
+          "id": "tests/test_2_api_endpoints.py::test_qa_run_orchestration_and_lock",
+          "name": "test_qa_run_orchestration_and_lock",
+          "layer": "API",
+          "status": "PASSED",
+          "duration_ms": 37.99,
+          "description": "QA-run gọi runner, trả snapshot mới và ánh xạ lỗi 409/504/500; khóa chặn chạy trùng.",
+          "errors": []
+        },
+        {
+          "id": "tests/test_2_api_endpoints.py::test_api_sla_under_500ms",
+          "name": "test_api_sla_under_500ms",
+          "layer": "API",
+          "status": "PASSED",
+          "duration_ms": 355.99,
+          "description": "140 HTTP requests trên 7 endpoint: mỗi phản hồi <500ms; lưu toàn bộ mẫu đo thực tế.",
+          "errors": []
+        }
+      ]
+    },
+    "DOM": {
+      "total": 6,
+      "passed": 6,
+      "tests": [
+        {
+          "id": "tests/test_3_ui_dom.py::test_homepage_http_200",
+          "name": "test_homepage_http_200",
+          "layer": "DOM",
+          "status": "PASSED",
+          "duration_ms": 20.411,
+          "description": "Trang chủ backend trả HTTP 200 kể cả khi Frontend chưa cung cấp template.",
+          "errors": []
+        },
+        {
+          "id": "tests/test_3_ui_dom.py::test_homepage_fallback_data_contract",
+          "name": "test_homepage_fallback_data_contract",
+          "layer": "DOM",
+          "status": "PASSED",
+          "duration_ms": 23.833,
+          "description": "JSON trang chủ nêu rõ frontend_ready=false và cung cấp đường dẫn tích hợp QA.",
+          "errors": []
+        },
+        {
+          "id": "tests/test_3_ui_dom.py::test_frontend_template_served_unchanged",
+          "name": "test_frontend_template_served_unchanged",
+          "layer": "DOM",
+          "status": "PASSED",
+          "duration_ms": 20.297,
+          "description": "Template tạm do test cung cấp được phục vụ nguyên văn với HTTP 200 và text/html.",
+          "errors": []
+        },
+        {
+          "id": "tests/test_3_ui_dom.py::test_template_dom_transport",
+          "name": "test_template_dom_transport",
+          "layer": "DOM",
+          "status": "PASSED",
+          "duration_ms": 125.94,
+          "description": "BeautifulSoup đọc được DOM của fixture qua HTTP; backend giữ html/head/body và UTF-8.",
+          "errors": []
+        },
+        {
+          "id": "tests/test_3_ui_dom.py::test_template_unicode_and_embedded_data",
+          "name": "test_template_unicode_and_embedded_data",
+          "layer": "DOM",
+          "status": "PASSED",
+          "duration_ms": 23.634,
+          "description": "Backend giữ tên tiếng Việt, entity HTML và JSON nhúng trong template fixture.",
+          "errors": []
+        },
+        {
+          "id": "tests/test_3_ui_dom.py::test_openapi_exposes_frontend_contract",
+          "name": "test_openapi_exposes_frontend_contract",
+          "layer": "DOM",
+          "status": "PASSED",
+          "duration_ms": 37.514,
+          "description": "OpenAPI công bố đúng phương thức hai API QA cùng schema đầu vào chia tiền.",
+          "errors": []
+        }
+      ]
+    }
+  },
+  "tests": [
+    {
+      "id": "tests/test_1_unit_math.py::test_equal_one_x",
+      "name": "test_equal_one_x",
+      "layer": "Unit",
+      "status": "PASSED",
+      "duration_ms": 0.594,
+      "description": "Ba suất 1x chia đều; đồng dư được phân bổ ổn định, không mất tiền.",
+      "errors": []
+    },
+    {
+      "id": "tests/test_1_unit_math.py::test_one_x_two_x",
+      "name": "test_one_x_two_x",
+      "layer": "Unit",
+      "status": "PASSED",
+      "duration_ms": 0.452,
+      "description": "Suất 2x trả gấp đôi suất 1x với hóa đơn chia hết.",
+      "errors": []
+    },
+    {
+      "id": "tests/test_1_unit_math.py::test_one_x_two_x_three_x",
+      "name": "test_one_x_two_x_three_x",
+      "layer": "Unit",
+      "status": "PASSED",
+      "duration_ms": 0.446,
+      "description": "Ba hệ số 1x/2x/3x bảo toàn đúng tỷ lệ 1:2:3.",
+      "errors": []
+    },
+    {
+      "id": "tests/test_1_unit_math.py::test_multiple_items_quantity_and_nonparticipant",
+      "name": "test_multiple_items_quantity_and_nonparticipant",
+      "layer": "Unit",
+      "status": "PASSED",
+      "duration_ms": 0.47,
+      "description": "Cộng nhiều món và số lượng đúng; người không chọn món có phần tiền bằng 0.",
+      "errors": []
+    },
+    {
+      "id": "tests/test_1_unit_math.py::test_weighted_tax_voucher_exact_vnd",
+      "name": "test_weighted_tax_voucher_exact_vnd",
+      "layer": "Unit",
+      "status": "PASSED",
+      "duration_ms": 158.827,
+      "description": "VAT/voucher/phụ phí phân bổ trọng số; 300 mẫu seed cố định có sai số tổng 0đ.",
+      "errors": []
+    },
+    {
+      "id": "tests/test_1_unit_math.py::test_zero_bill",
+      "name": "test_zero_bill",
+      "layer": "Unit",
+      "status": "PASSED",
+      "duration_ms": 0.494,
+      "description": "Hóa đơn 0đ, danh sách rỗng và món 0đ không chia cho 0.",
+      "errors": []
+    },
+    {
+      "id": "tests/test_1_unit_math.py::test_hundred_percent_discount",
+      "name": "test_hundred_percent_discount",
+      "layer": "Unit",
+      "status": "PASSED",
+      "duration_ms": 0.582,
+      "description": "Voucher 100% đưa tổng và từng phần về 0đ; VAT vẫn cộng đúng nếu có.",
+      "errors": []
+    },
+    {
+      "id": "tests/test_1_unit_math.py::test_no_selection_uses_explicit_fallback",
+      "name": "test_no_selection_uses_explicit_fallback",
+      "layer": "Unit",
+      "status": "PASSED",
+      "duration_ms": 0.576,
+      "description": "Món chưa ai chọn hoặc mọi hệ số bằng 0 được chia đều, không ZeroDivisionError.",
+      "errors": []
+    },
+    {
+      "id": "tests/test_1_unit_math.py::test_invalid_money_members_and_weights",
+      "name": "test_invalid_money_members_and_weights",
+      "layer": "Unit",
+      "status": "PASSED",
+      "duration_ms": 0.552,
+      "description": "Từ chối tiền âm/lẻ, voucher vượt hóa đơn, tên trùng và hệ số không hợp lệ.",
+      "errors": []
+    },
+    {
+      "id": "tests/test_1_unit_math.py::test_trip_graph_at_most_n_minus_one",
+      "name": "test_trip_graph_at_most_n_minus_one",
+      "layer": "Unit",
+      "status": "PASSED",
+      "duration_ms": 6.004,
+      "description": "Cấn trừ đồ thị bảo toàn số dư và tối đa N-1 giao dịch trên 200 mạng nợ.",
+      "errors": []
+    },
+    {
+      "id": "tests/test_2_api_endpoints.py::test_health",
+      "name": "test_health",
+      "layer": "API",
+      "status": "PASSED",
+      "duration_ms": 50.33,
+      "description": "Health trả HTTP 200, JSON trạng thái và đơn vị VND.",
+      "errors": []
+    },
+    {
+      "id": "tests/test_2_api_endpoints.py::test_split_contract_and_validation",
+      "name": "test_split_contract_and_validation",
+      "layer": "API",
+      "status": "PASSED",
+      "duration_ms": 72.618,
+      "description": "API chia tiền đúng trọng số và trả 422 cho payload sai hoặc không bảo toàn tiền.",
+      "errors": []
+    },
+    {
+      "id": "tests/test_2_api_endpoints.py::test_vietqr_normalizes_and_encodes",
+      "name": "test_vietqr_normalizes_and_encodes",
+      "layer": "API",
+      "status": "PASSED",
+      "duration_ms": 31.616,
+      "description": "VietQR xóa whitespace STK, bỏ dấu tên Việt và encode memo có ký tự đặc biệt.",
+      "errors": []
+    },
+    {
+      "id": "tests/test_2_api_endpoints.py::test_csv_has_utf8_bom_and_unicode",
+      "name": "test_csv_has_utf8_bom_and_unicode",
+      "layer": "API",
+      "status": "PASSED",
+      "duration_ms": 23.436,
+      "description": "CSV có chính xác BOM EF BB BF ở ba byte đầu, giữ tiếng Việt và giá trị tiền.",
+      "errors": []
+    },
+    {
+      "id": "tests/test_2_api_endpoints.py::test_sqlite_save_read_and_reopen",
+      "name": "test_sqlite_save_read_and_reopen",
+      "layer": "API",
+      "status": "PASSED",
+      "duration_ms": 46.867,
+      "description": "SQLite lưu thật, dùng câu lệnh tham số và đọc lại sau khi tạo ứng dụng mới.",
+      "errors": []
+    },
+    {
+      "id": "tests/test_2_api_endpoints.py::test_analytics_and_missing_bill",
+      "name": "test_analytics_and_missing_bill",
+      "layer": "API",
+      "status": "PASSED",
+      "duration_ms": 87.3,
+      "description": "Thống kê SQLite cộng đúng số hóa đơn và tổng; ID thiếu trả 404.",
+      "errors": []
+    },
+    {
+      "id": "tests/test_2_api_endpoints.py::test_trip_debt_endpoint",
+      "name": "test_trip_debt_endpoint",
+      "layer": "API",
+      "status": "PASSED",
+      "duration_ms": 24.609,
+      "description": "Endpoint cấn trừ trả giao dịch cụ thể và từ chối số dư không cân bằng.",
+      "errors": []
+    },
+    {
+      "id": "tests/test_2_api_endpoints.py::test_qa_summary_snapshot_and_unavailable",
+      "name": "test_qa_summary_snapshot_and_unavailable",
+      "layer": "API",
+      "status": "PASSED",
+      "duration_ms": 37.551,
+      "description": "QA summary trả nguyên snapshot; báo 503 khi report thiếu, hỏng hoặc sai schema.",
+      "errors": []
+    },
+    {
+      "id": "tests/test_2_api_endpoints.py::test_qa_run_orchestration_and_lock",
+      "name": "test_qa_run_orchestration_and_lock",
+      "layer": "API",
+      "status": "PASSED",
+      "duration_ms": 37.99,
+      "description": "QA-run gọi runner, trả snapshot mới và ánh xạ lỗi 409/504/500; khóa chặn chạy trùng.",
+      "errors": []
+    },
+    {
+      "id": "tests/test_2_api_endpoints.py::test_api_sla_under_500ms",
+      "name": "test_api_sla_under_500ms",
+      "layer": "API",
+      "status": "PASSED",
+      "duration_ms": 355.99,
+      "description": "140 HTTP requests trên 7 endpoint: mỗi phản hồi <500ms; lưu toàn bộ mẫu đo thực tế.",
+      "errors": []
+    },
+    {
+      "id": "tests/test_3_ui_dom.py::test_homepage_http_200",
+      "name": "test_homepage_http_200",
+      "layer": "DOM",
+      "status": "PASSED",
+      "duration_ms": 20.411,
+      "description": "Trang chủ backend trả HTTP 200 kể cả khi Frontend chưa cung cấp template.",
+      "errors": []
+    },
+    {
+      "id": "tests/test_3_ui_dom.py::test_homepage_fallback_data_contract",
+      "name": "test_homepage_fallback_data_contract",
+      "layer": "DOM",
+      "status": "PASSED",
+      "duration_ms": 23.833,
+      "description": "JSON trang chủ nêu rõ frontend_ready=false và cung cấp đường dẫn tích hợp QA.",
+      "errors": []
+    },
+    {
+      "id": "tests/test_3_ui_dom.py::test_frontend_template_served_unchanged",
+      "name": "test_frontend_template_served_unchanged",
+      "layer": "DOM",
+      "status": "PASSED",
+      "duration_ms": 20.297,
+      "description": "Template tạm do test cung cấp được phục vụ nguyên văn với HTTP 200 và text/html.",
+      "errors": []
+    },
+    {
+      "id": "tests/test_3_ui_dom.py::test_template_dom_transport",
+      "name": "test_template_dom_transport",
+      "layer": "DOM",
+      "status": "PASSED",
+      "duration_ms": 125.94,
+      "description": "BeautifulSoup đọc được DOM của fixture qua HTTP; backend giữ html/head/body và UTF-8.",
+      "errors": []
+    },
+    {
+      "id": "tests/test_3_ui_dom.py::test_template_unicode_and_embedded_data",
+      "name": "test_template_unicode_and_embedded_data",
+      "layer": "DOM",
+      "status": "PASSED",
+      "duration_ms": 23.634,
+      "description": "Backend giữ tên tiếng Việt, entity HTML và JSON nhúng trong template fixture.",
+      "errors": []
+    },
+    {
+      "id": "tests/test_3_ui_dom.py::test_openapi_exposes_frontend_contract",
+      "name": "test_openapi_exposes_frontend_contract",
+      "layer": "DOM",
+      "status": "PASSED",
+      "duration_ms": 37.514,
+      "description": "OpenAPI công bố đúng phương thức hai API QA cùng schema đầu vào chia tiền.",
+      "errors": []
+    }
+  ],
+  "defects": [
+    {
+      "id": "BUG-001",
+      "title": "CSV Excel thiếu UTF-8 BOM",
+      "owner": "Backend",
+      "status": "VERIFIED_PREVENTION",
+      "origin": "user_requested_regression_scenario",
+      "legacy_defect_reproduced": false,
+      "description": "CSV được mã hóa utf-8-sig; xác minh ba byte EF BB BF và round-trip tiếng Việt.",
+      "regression_tests": [
+        "test_csv_has_utf8_bom_and_unicode"
+      ]
+    },
+    {
+      "id": "BUG-002",
+      "title": "Tương phản CSS Dark Mode",
+      "owner": "Frontend",
+      "status": "PENDING_FRONTEND",
+      "origin": "user_requested_regression_scenario",
+      "legacy_defect_reproduced": false,
+      "description": "Chưa có template/CSS thực tế; chưa tái hiện hoặc sửa. Đội Frontend cần xác minh.",
+      "regression_tests": []
+    },
+    {
+      "id": "BUG-003",
+      "title": "Khoảng trắng STK và dấu tiếng Việt trong VietQR",
+      "owner": "Backend",
+      "status": "VERIFIED_PREVENTION",
+      "origin": "user_requested_regression_scenario",
+      "legacy_defect_reproduced": false,
+      "description": "Xóa whitespace STK, chuẩn hóa tên Latin viết hoa và URL-encode query.",
+      "regression_tests": [
+        "test_vietqr_normalizes_and_encodes"
+      ]
+    },
+    {
+      "id": "BUG-004",
+      "title": "Chia cho 0 và lệch tiền khi làm tròn",
+      "owner": "Backend",
+      "status": "VERIFIED_PREVENTION",
+      "origin": "user_requested_regression_scenario",
+      "legacy_defect_reproduced": false,
+      "description": "Dùng Fraction và largest remainder; chính sách món chưa chọn là chia đều.",
+      "regression_tests": [
+        "test_zero_bill",
+        "test_no_selection_uses_explicit_fallback",
+        "test_weighted_tax_voucher_exact_vnd"
+      ]
+    }
+  ],
+  "sla": {
+    "threshold_ms": 500,
+    "comparison": "strictly_less_than",
+    "scope": "local FastAPI TestClient; sequential business API and qa-summary requests",
+    "exclusions": [
+      "POST /api/qa-run (executes the complete suite)",
+      "external VietQR service"
+    ],
+    "sample_count": 140,
+    "max_ms": 5.156499999429798,
+    "p95_ms": 3.1989999997676932,
+    "mean_ms": 2.337395714266677,
+    "passed": true,
+    "endpoints": [
+      {
+        "endpoint": "GET /api/analytics",
+        "sample_count": 20,
+        "max_ms": 5.156499999429798
+      },
+      {
+        "endpoint": "GET /api/bills/1",
+        "sample_count": 20,
+        "max_ms": 3.7321999998312094
+      },
+      {
+        "endpoint": "GET /api/health",
+        "sample_count": 20,
+        "max_ms": 2.7476000004753587
+      },
+      {
+        "endpoint": "GET /api/qa-summary",
+        "sample_count": 20,
+        "max_ms": 3.3036000004358357
+      },
+      {
+        "endpoint": "POST /api/export-csv",
+        "sample_count": 20,
+        "max_ms": 3.1989999997676932
+      },
+      {
+        "endpoint": "POST /api/split",
+        "sample_count": 20,
+        "max_ms": 2.9809999996359693
+      },
+      {
+        "endpoint": "POST /api/vietqr",
+        "sample_count": 20,
+        "max_ms": 2.1790999999211635
+      }
+    ],
+    "samples": [
+      {
+        "endpoint": "GET /api/health",
+        "duration_ms": 2.187400000366324
+      },
+      {
+        "endpoint": "POST /api/split",
+        "duration_ms": 2.3941999997987296
+      },
+      {
+        "endpoint": "POST /api/vietqr",
+        "duration_ms": 2.1790999999211635
+      },
+      {
+        "endpoint": "POST /api/export-csv",
+        "duration_ms": 3.1989999997676932
+      },
+      {
+        "endpoint": "GET /api/analytics",
+        "duration_ms": 5.156499999429798
+      },
+      {
+        "endpoint": "GET /api/bills/1",
+        "duration_ms": 3.2482999995409045
+      },
+      {
+        "endpoint": "GET /api/qa-summary",
+        "duration_ms": 3.3036000004358357
+      },
+      {
+        "endpoint": "GET /api/health",
+        "duration_ms": 2.056100000118022
+      },
+      {
+        "endpoint": "POST /api/split",
+        "duration_ms": 2.2347000003719586
+      },
+      {
+        "endpoint": "POST /api/vietqr",
+        "duration_ms": 1.965300000847492
+      },
+      {
+        "endpoint": "POST /api/export-csv",
+        "duration_ms": 2.195000000028813
+      },
+      {
+        "endpoint": "GET /api/analytics",
+        "duration_ms": 2.926099999967846
+      },
+      {
+        "endpoint": "GET /api/bills/1",
+        "duration_ms": 2.889500000492262
+      },
+      {
+        "endpoint": "GET /api/qa-summary",
+        "duration_ms": 1.961900000424066
+      },
+      {
+        "endpoint": "GET /api/health",
+        "duration_ms": 1.7907000001287088
+      },
+      {
+        "endpoint": "POST /api/split",
+        "duration_ms": 2.6874999994106474
+      },
+      {
+        "endpoint": "POST /api/vietqr",
+        "duration_ms": 1.9461999991108314
+      },
+      {
+        "endpoint": "POST /api/export-csv",
+        "duration_ms": 2.0748999995703343
+      },
+      {
+        "endpoint": "GET /api/analytics",
+        "duration_ms": 2.865100000235543
+      },
+      {
+        "endpoint": "GET /api/bills/1",
+        "duration_ms": 2.8919000005771522
+      },
+      {
+        "endpoint": "GET /api/qa-summary",
+        "duration_ms": 2.0515000005616457
+      },
+      {
+        "endpoint": "GET /api/health",
+        "duration_ms": 1.8287999992026016
+      },
+      {
+        "endpoint": "POST /api/split",
+        "duration_ms": 2.1666999991794
+      },
+      {
+        "endpoint": "POST /api/vietqr",
+        "duration_ms": 1.878200000646757
+      },
+      {
+        "endpoint": "POST /api/export-csv",
+        "duration_ms": 1.9977000001745182
+      },
+      {
+        "endpoint": "GET /api/analytics",
+        "duration_ms": 2.8173999999125954
+      },
+      {
+        "endpoint": "GET /api/bills/1",
+        "duration_ms": 2.876300000025367
+      },
+      {
+        "endpoint": "GET /api/qa-summary",
+        "duration_ms": 2.4460000004182803
+      },
+      {
+        "endpoint": "GET /api/health",
+        "duration_ms": 1.7278000004807836
+      },
+      {
+        "endpoint": "POST /api/split",
+        "duration_ms": 2.1387999995567952
+      },
+      {
+        "endpoint": "POST /api/vietqr",
+        "duration_ms": 1.8084000003000256
+      },
+      {
+        "endpoint": "POST /api/export-csv",
+        "duration_ms": 1.9753999995373306
+      },
+      {
+        "endpoint": "GET /api/analytics",
+        "duration_ms": 2.7675000001181616
+      },
+      {
+        "endpoint": "GET /api/bills/1",
+        "duration_ms": 2.7744999997594277
+      },
+      {
+        "endpoint": "GET /api/qa-summary",
+        "duration_ms": 1.9552000003386638
+      },
+      {
+        "endpoint": "GET /api/health",
+        "duration_ms": 1.797699999769975
+      },
+      {
+        "endpoint": "POST /api/split",
+        "duration_ms": 2.9809999996359693
+      },
+      {
+        "endpoint": "POST /api/vietqr",
+        "duration_ms": 1.8641000006027753
+      },
+      {
+        "endpoint": "POST /api/export-csv",
+        "duration_ms": 2.0930000000589644
+      },
+      {
+        "endpoint": "GET /api/analytics",
+        "duration_ms": 2.8579999998328276
+      },
+      {
+        "endpoint": "GET /api/bills/1",
+        "duration_ms": 2.8031000001647044
+      },
+      {
+        "endpoint": "GET /api/qa-summary",
+        "duration_ms": 2.3058000006130897
+      },
+      {
+        "endpoint": "GET /api/health",
+        "duration_ms": 1.7544000002089888
+      },
+      {
+        "endpoint": "POST /api/split",
+        "duration_ms": 2.066900000500027
+      },
+      {
+        "endpoint": "POST /api/vietqr",
+        "duration_ms": 1.85090000013588
+      },
+      {
+        "endpoint": "POST /api/export-csv",
+        "duration_ms": 2.0119000000704546
+      },
+      {
+        "endpoint": "GET /api/analytics",
+        "duration_ms": 2.77029999961087
+      },
+      {
+        "endpoint": "GET /api/bills/1",
+        "duration_ms": 2.8148999999757507
+      },
+      {
+        "endpoint": "GET /api/qa-summary",
+        "duration_ms": 2.1317000000635744
+      },
+      {
+        "endpoint": "GET /api/health",
+        "duration_ms": 2.7476000004753587
+      },
+      {
+        "endpoint": "POST /api/split",
+        "duration_ms": 2.232499999990978
+      },
+      {
+        "endpoint": "POST /api/vietqr",
+        "duration_ms": 1.8590999998195912
+      },
+      {
+        "endpoint": "POST /api/export-csv",
+        "duration_ms": 2.4401000000580098
+      },
+      {
+        "endpoint": "GET /api/analytics",
+        "duration_ms": 2.9588999996121856
+      },
+      {
+        "endpoint": "GET /api/bills/1",
+        "duration_ms": 2.8456999998525134
+      },
+      {
+        "endpoint": "GET /api/qa-summary",
+        "duration_ms": 2.2827000002507702
+      },
+      {
+        "endpoint": "GET /api/health",
+        "duration_ms": 1.6988000006676884
+      },
+      {
+        "endpoint": "POST /api/split",
+        "duration_ms": 2.146800000446092
+      },
+      {
+        "endpoint": "POST /api/vietqr",
+        "duration_ms": 1.8995000000359141
+      },
+      {
+        "endpoint": "POST /api/export-csv",
+        "duration_ms": 1.9680999994307058
+      },
+      {
+        "endpoint": "GET /api/analytics",
+        "duration_ms": 2.786200000628014
+      },
+      {
+        "endpoint": "GET /api/bills/1",
+        "duration_ms": 2.6982999997926527
+      },
+      {
+        "endpoint": "GET /api/qa-summary",
+        "duration_ms": 2.584699999715667
+      },
+      {
+        "endpoint": "GET /api/health",
+        "duration_ms": 1.960999999937485
+      },
+      {
+        "endpoint": "POST /api/split",
+        "duration_ms": 2.1560999994107988
+      },
+      {
+        "endpoint": "POST /api/vietqr",
+        "duration_ms": 1.8498999997973442
+      },
+      {
+        "endpoint": "POST /api/export-csv",
+        "duration_ms": 2.045499999439926
+      },
+      {
+        "endpoint": "GET /api/analytics",
+        "duration_ms": 2.97359999967739
+      },
+      {
+        "endpoint": "GET /api/bills/1",
+        "duration_ms": 2.8782999997929437
+      },
+      {
+        "endpoint": "GET /api/qa-summary",
+        "duration_ms": 2.119699999639124
+      },
+      {
+        "endpoint": "GET /api/health",
+        "duration_ms": 1.7331000008198316
+      },
+      {
+        "endpoint": "POST /api/split",
+        "duration_ms": 2.0719000003737165
+      },
+      {
+        "endpoint": "POST /api/vietqr",
+        "duration_ms": 1.8933999999717344
+      },
+      {
+        "endpoint": "POST /api/export-csv",
+        "duration_ms": 2.0724000005429843
+      },
+      {
+        "endpoint": "GET /api/analytics",
+        "duration_ms": 2.892700000302284
+      },
+      {
+        "endpoint": "GET /api/bills/1",
+        "duration_ms": 2.851899999768648
+      },
+      {
+        "endpoint": "GET /api/qa-summary",
+        "duration_ms": 2.8149999998277053
+      },
+      {
+        "endpoint": "GET /api/health",
+        "duration_ms": 2.2144999993543024
+      },
+      {
+        "endpoint": "POST /api/split",
+        "duration_ms": 2.093799999784096
+      },
+      {
+        "endpoint": "POST /api/vietqr",
+        "duration_ms": 1.858399999946414
+      },
+      {
+        "endpoint": "POST /api/export-csv",
+        "duration_ms": 2.0034999997733394
+      },
+      {
+        "endpoint": "GET /api/analytics",
+        "duration_ms": 2.7731000000130734
+      },
+      {
+        "endpoint": "GET /api/bills/1",
+        "duration_ms": 2.938900000117428
+      },
+      {
+        "endpoint": "GET /api/qa-summary",
+        "duration_ms": 1.9673999995575286
+      },
+      {
+        "endpoint": "GET /api/health",
+        "duration_ms": 1.693600000180595
+      },
+      {
+        "endpoint": "POST /api/split",
+        "duration_ms": 2.1042999997007428
+      },
+      {
+        "endpoint": "POST /api/vietqr",
+        "duration_ms": 1.8827000003511785
+      },
+      {
+        "endpoint": "POST /api/export-csv",
+        "duration_ms": 1.8938000002890476
+      },
+      {
+        "endpoint": "GET /api/analytics",
+        "duration_ms": 2.9182999996919534
+      },
+      {
+        "endpoint": "GET /api/bills/1",
+        "duration_ms": 2.7493000006870716
+      },
+      {
+        "endpoint": "GET /api/qa-summary",
+        "duration_ms": 2.0476999998209067
+      },
+      {
+        "endpoint": "GET /api/health",
+        "duration_ms": 1.703799999631883
+      },
+      {
+        "endpoint": "POST /api/split",
+        "duration_ms": 2.1394999994299724
+      },
+      {
+        "endpoint": "POST /api/vietqr",
+        "duration_ms": 1.8393999998806976
+      },
+      {
+        "endpoint": "POST /api/export-csv",
+        "duration_ms": 2.013700000134122
+      },
+      {
+        "endpoint": "GET /api/analytics",
+        "duration_ms": 2.76789999952598
+      },
+      {
+        "endpoint": "GET /api/bills/1",
+        "duration_ms": 2.734499999860418
+      },
+      {
+        "endpoint": "GET /api/qa-summary",
+        "duration_ms": 3.137000000606349
+      },
+      {
+        "endpoint": "GET /api/health",
+        "duration_ms": 1.7445000003135647
+      },
+      {
+        "endpoint": "POST /api/split",
+        "duration_ms": 2.218200000243087
+      },
+      {
+        "endpoint": "POST /api/vietqr",
+        "duration_ms": 1.828899999964051
+      },
+      {
+        "endpoint": "POST /api/export-csv",
+        "duration_ms": 2.0024999994348036
+      },
+      {
+        "endpoint": "GET /api/analytics",
+        "duration_ms": 3.155700000206707
+      },
+      {
+        "endpoint": "GET /api/bills/1",
+        "duration_ms": 3.178200000547804
+      },
+      {
+        "endpoint": "GET /api/qa-summary",
+        "duration_ms": 2.008699999350938
+      },
+      {
+        "endpoint": "GET /api/health",
+        "duration_ms": 1.726000000417116
+      },
+      {
+        "endpoint": "POST /api/split",
+        "duration_ms": 2.1077000001241686
+      },
+      {
+        "endpoint": "POST /api/vietqr",
+        "duration_ms": 1.8623999994815676
+      },
+      {
+        "endpoint": "POST /api/export-csv",
+        "duration_ms": 1.9726999998965766
+      },
+      {
+        "endpoint": "GET /api/analytics",
+        "duration_ms": 2.834499999153195
+      },
+      {
+        "endpoint": "GET /api/bills/1",
+        "duration_ms": 3.7321999998312094
+      },
+      {
+        "endpoint": "GET /api/qa-summary",
+        "duration_ms": 2.0680999996329774
+      },
+      {
+        "endpoint": "GET /api/health",
+        "duration_ms": 1.6949999999269494
+      },
+      {
+        "endpoint": "POST /api/split",
+        "duration_ms": 2.05530000039289
+      },
+      {
+        "endpoint": "POST /api/vietqr",
+        "duration_ms": 1.8387000000075204
+      },
+      {
+        "endpoint": "POST /api/export-csv",
+        "duration_ms": 2.025300000241259
+      },
+      {
+        "endpoint": "GET /api/analytics",
+        "duration_ms": 2.94209999992745
+      },
+      {
+        "endpoint": "GET /api/bills/1",
+        "duration_ms": 2.9796999997415696
+      },
+      {
+        "endpoint": "GET /api/qa-summary",
+        "duration_ms": 1.8907000003309804
+      },
+      {
+        "endpoint": "GET /api/health",
+        "duration_ms": 1.7612999999983003
+      },
+      {
+        "endpoint": "POST /api/split",
+        "duration_ms": 2.041599999756727
+      },
+      {
+        "endpoint": "POST /api/vietqr",
+        "duration_ms": 2.048399999694084
+      },
+      {
+        "endpoint": "POST /api/export-csv",
+        "duration_ms": 2.0020000001750304
+      },
+      {
+        "endpoint": "GET /api/analytics",
+        "duration_ms": 2.7724000001398963
+      },
+      {
+        "endpoint": "GET /api/bills/1",
+        "duration_ms": 3.4630999998626066
+      },
+      {
+        "endpoint": "GET /api/qa-summary",
+        "duration_ms": 2.3026999997455277
+      },
+      {
+        "endpoint": "GET /api/health",
+        "duration_ms": 1.7322000003332505
+      },
+      {
+        "endpoint": "POST /api/split",
+        "duration_ms": 2.3928000000523753
+      },
+      {
+        "endpoint": "POST /api/vietqr",
+        "duration_ms": 1.8891999998231768
+      },
+      {
+        "endpoint": "POST /api/export-csv",
+        "duration_ms": 2.1031999995102524
+      },
+      {
+        "endpoint": "GET /api/analytics",
+        "duration_ms": 2.8289000001677778
+      },
+      {
+        "endpoint": "GET /api/bills/1",
+        "duration_ms": 3.222499999537831
+      },
+      {
+        "endpoint": "GET /api/qa-summary",
+        "duration_ms": 1.9423000003371271
+      },
+      {
+        "endpoint": "GET /api/health",
+        "duration_ms": 1.7410999998901389
+      },
+      {
+        "endpoint": "POST /api/split",
+        "duration_ms": 2.183099999456317
+      },
+      {
+        "endpoint": "POST /api/vietqr",
+        "duration_ms": 1.8190000000686268
+      },
+      {
+        "endpoint": "POST /api/export-csv",
+        "duration_ms": 2.0692999996754224
+      },
+      {
+        "endpoint": "GET /api/analytics",
+        "duration_ms": 3.4846999997171224
+      },
+      {
+        "endpoint": "GET /api/bills/1",
+        "duration_ms": 3.1856999994488433
+      },
+      {
+        "endpoint": "GET /api/qa-summary",
+        "duration_ms": 1.9773000003624475
+      }
+    ]
+  },
+  "errors": [],
+  "html_report": "/api/qa-report",
+  "limitations": [
+    "DOM tests check backend document/data contracts using a temporary HTML fixture.",
+    "No production frontend or Dark Mode CSS is available in this new workspace.",
+    "Defect log lists required regression scenarios, not four reproduced legacy bugs."
+  ]
+}
